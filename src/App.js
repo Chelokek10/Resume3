@@ -14,7 +14,7 @@ import {
 const AnimatedInputField = animated(InputField);// Створення анімованого поля вводу
 const AnimatedTextAreaField = animated(TextAreaField);// Створення анімованого поля для текстового введення
 
-const AnimatedTextField = ({ label, name, value, onChange }) => {//  анімоване текстове поле
+const AnimatedTextField = ({ label, name, value, onChange }) => {
   return (
     <Field>
       <Label>{label}</Label>
