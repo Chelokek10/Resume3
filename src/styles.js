@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 export const ResumeContainer = styled.div` // Стиль контейнера для резюме
   max-width: 800px;  // Максимальна ширина контейнера
@@ -32,6 +33,25 @@ export const Label = styled.label`
   display: block; // Блоковий елемент
   font-weight: bold; // Товщина шрифту
   margin-bottom: 5px; // Відступ поля від назви поля
+`;
+
+
+export const AnimatedInputField = styled(animated.input)`
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-bottom: 10px;
+`;
+
+export const AnimatedTextAreaField = styled(animated.textarea)`
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-bottom: 10px;
 `;
 
 export const InputField = styled.input`
