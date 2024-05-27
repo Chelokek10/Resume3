@@ -9,13 +9,13 @@ import {
   Label,
   AnimatedInputField,
   AnimatedTextAreaField,
-} from './styles';
+} from './styles'; // Імпорт потрібних компонентів і стилів
 
 const AnimatedTextField = ({ label, name, value, onChange }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); // стан для відстеження, чи наведений курсор на поле
 
   const animation = useSpring({
-    backgroundColor: isHovered ? 'rgba(173, 216, 230, 0.5)' : 'white',
+    backgroundColor: isHovered ? 'rgba(173, 216, 230, 0.5)' : 'white', // анімація для зміни фону при наведенні
   });
 
   return (
@@ -28,8 +28,8 @@ const AnimatedTextField = ({ label, name, value, onChange }) => {
           value={value}
           onChange={onChange}
           rows={value.split('\n').length}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          onMouseEnter={() => setIsHovered(true)} // наведений курсор
+          onMouseLeave={() => setIsHovered(false)} // відведеня курсора
         />
       ) : (
         <AnimatedInputField
